@@ -1,5 +1,6 @@
-# flutter_ayetstudios
+# new_flutter_ayetstudios
 
+A new flutter plugin project.
 
 ## Getting Started
 
