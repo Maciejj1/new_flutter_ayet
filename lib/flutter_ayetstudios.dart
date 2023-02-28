@@ -27,7 +27,7 @@ class AyeTStudios {
 
   Future<void> init({String? uid, String? appKey}) async {
     return _channel.invokeMethod("init", <String, dynamic>{
-      'appKey': appKey,
+      'appkey': appKey,
       'uid': uid,
     });
   }

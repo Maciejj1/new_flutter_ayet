@@ -15,7 +15,8 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     if (Platform.isAndroid) {
-      AyeTStudios.instance.init(uid: 'uid', appKey: '');
+      AyeTStudios.instance
+          .init(uid: 'uid', appKey: '6d96bcaf216614a7bf4779f2c811a8ce');
       AyeTStudios.instance.setInitilizationFailedListener(initializationFailed);
       AyeTStudios.instance.setUserAvailableBalance(userAvailableBalance);
       AyeTStudios.instance.setUserBalanceChanged(userBalanceChanged);
