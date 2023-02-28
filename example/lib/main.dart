@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
     } else if (Platform.isIOS) {
       AyeTStudiosIOS.instance.sdkLogEnable();
       AyeTStudiosIOS.instance
-          .init(appKey: '6d96bcaf216614a7bf4779f2c811a8ce', uid: 'uid');
+          .init(appKey: 'appkey', uid: 'uid');
       AyeTStudiosIOS.instance.setUserAvailableBalance(userAvailableBalance);
       AyeTStudiosIOS.instance.setUserBalanceChanged(userBalanceChanged);
       AyeTStudiosIOS.instance.setUserPendingBalance(userPendingBalance);
