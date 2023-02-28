@@ -25,9 +25,9 @@ class AyeTStudios {
   static UserPendingBalance? _userPendingBalance;
   static InitializationFailed? _initializationFailed;
 
-  Future<void> init({String? uid}) async {
+  Future<void> init({String? uid, String? appKey}) async {
     return _channel.invokeMethod("init", <String, dynamic>{
-      'appkey': appKey,
+      'appKey': appKey,
       'uid': uid,
     });
   }
@@ -63,8 +63,8 @@ class AyeTStudios {
         print("initializationFailed");
         break;
       case "deductUserBalance":
-_deductUserBalance!(call.arguments);
-break;
+        _deductUserBalance!(call.arguments);
+        break;
       default:
         print('Unknown method ${call.method} ');
     }
@@ -82,5 +82,6 @@ break;
   void setInitilizationFailedListener(
           InitializationFailed initializationFailed) =>
       _initializationFailed = initializationFailed;
-  void setDeductUserBalanceListener(DeductUserBalance deductUserBalance) => _deductUserBalance = deductUserBalance;
+  void setDeductUserBalanceListener(DeductUserBalance deductUserBalance) =>
+      _deductUserBalance = deductUserBalance;
 }

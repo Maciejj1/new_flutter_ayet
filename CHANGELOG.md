@@ -6,3 +6,5 @@ Null safety added
 update sdk
 ## 1.1.1 
 update sdk
+## 1.1.2 
+update sdk

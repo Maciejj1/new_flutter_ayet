@@ -15,15 +15,14 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     if (Platform.isAndroid) {
-      AyeTStudios.instance.init(uid: 'uid');
+      AyeTStudios.instance.init(uid: 'uid', appKey: '');
       AyeTStudios.instance.setInitilizationFailedListener(initializationFailed);
       AyeTStudios.instance.setUserAvailableBalance(userAvailableBalance);
       AyeTStudios.instance.setUserBalanceChanged(userBalanceChanged);
       AyeTStudios.instance.setUserPendingBalance(userPendingBalance);
     } else if (Platform.isIOS) {
       AyeTStudiosIOS.instance.sdkLogEnable();
-      AyeTStudiosIOS.instance
-          .init(appKey: 'appkey', uid: 'uid');
+      AyeTStudiosIOS.instance.init(appKey: 'appkey', uid: 'uid');
       AyeTStudiosIOS.instance.setUserAvailableBalance(userAvailableBalance);
       AyeTStudiosIOS.instance.setUserBalanceChanged(userBalanceChanged);
       AyeTStudiosIOS.instance.setUserPendingBalance(userPendingBalance);

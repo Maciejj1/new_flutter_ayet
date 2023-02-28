@@ -54,7 +54,7 @@ void OnMethodCallHandler(final String method, final int args) {
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
     if (call.method.equals("init")) {
         String amount = call.argument("uid");
-        String appKey = call.argument('appkey');
+        String appKey = call.argument("appkey");
        AyetSdk.init(activity.getApplication(), amount, new UserBalanceCallback() { 
             @Override
             public void userBalanceChanged(SdkUserBalance sdkUserBalance) {
